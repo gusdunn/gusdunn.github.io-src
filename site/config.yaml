@@ -1,0 +1,29 @@
+BaseUrl: "http://gusdunn.com/"
+LanguageCode: "en-us"
+Title: "Gus Dunn"
+canonifyurls: true
+copyright: "Copyright (c) 2015, Gus Dunn; some rights reserved."
+footnotereturnlinkcontents: "↩"
+
+Params:
+  Author: "Gus Dunn"
+  DateForm: "2006-01-02 03:56"
+  GoogleAnalyticsUserID: "None"
+  description: "biologist and coder"
+  googleAnalytics: UA-63545392-1
+  social:
+  - icon: envelope-o
+    title: email
+    url: mailto:gus.dunn@yale.edu
+  - icon: twitter
+    title: twitter
+    url: https://twitter.com/xguse
+  - icon: github
+    title: github
+    url: https://github.com/xguse
+  - icon: linkedin
+    title: linkedin
+    url: www.linkedin.com/in/gusdunn
+
+
+MetadataFormat: "yaml"
