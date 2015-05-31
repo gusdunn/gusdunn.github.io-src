@@ -1,0 +1,6 @@
+[submodule "site/themes/hugo-base-theme"]
+	path = site/themes/hugo-base-theme
+	url = git@github.com:xguse/hugo-base-theme.git
+[submodule "site/themes/landing-page-hugo"]
+	path = site/themes/landing-page-hugo
+	url = git@github.com:xguse/landing-page-hugo.git
