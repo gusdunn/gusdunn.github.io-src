@@ -3,7 +3,7 @@
 DEPLOYMENT_REPO=dist-build/gusdunn.com
 
 # Contents of CNAME file
-CNAME="gusdunn.com"
+CNAME="www.gusdunn.com"
 
 all: server
 
