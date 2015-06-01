@@ -7,7 +7,7 @@ CNAME="www.gusdunn.com"
 
 all: server
 
-build: dist
+build: dist install-stuff
 
 help:
 	@echo "\033[0;4mAvailable targets:\033[0m"
@@ -29,11 +29,14 @@ clean:
 dist: dist-clean
 	# Build the project for publishing
 	hugo -s site -d ${DEPLOYMENT_REPO}
-	# replace the CNAME file after cleaning
-	echo ${CNAME} > site/${DEPLOYMENT_REPO}/CNAME
 
 dist-clean:
 	# clean publishing output dir
 	# NB: Avoid removing the .git folder
 	-rm -r site/${DEPLOYMENT_REPO}/*
 
+install-stuff:
+	# install a CNAME file
+	echo ${CNAME} > site/${DEPLOYMENT_REPO}/CNAME
+	# install the readme and license files
+	cp README.md LICENSE.html site/${DEPLOYMENT_REPO}/
