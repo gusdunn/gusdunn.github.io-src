@@ -3,7 +3,7 @@
 DEPLOYMENT_REPO=dist-build/gusdunn.com
 
 # Contents of CNAME file
-CNAME="www.gusdunn.com"
+CNAME="www.gusdunn.com\ngusdunn.com"
 
 all: server
 
@@ -37,6 +37,6 @@ dist-clean:
 
 install-stuff:
 	# install a CNAME file
-	echo ${CNAME} > site/${DEPLOYMENT_REPO}/CNAME
+	echo -e ${CNAME} > site/${DEPLOYMENT_REPO}/CNAME
 	# install the readme and license files
 	cp README.md LICENSE.html site/${DEPLOYMENT_REPO}/
