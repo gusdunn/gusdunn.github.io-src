@@ -30,7 +30,7 @@ dist: dist-clean
 	# Build the project for publishing
 	hugo -s site -d ${DEPLOYMENT_REPO}
 	# replace the CNAME file after cleaning
-	echo $CNAME > ${DEPLOYMENT_REPO}/CNAME
+	echo ${CNAME} > site/${DEPLOYMENT_REPO}/CNAME
 
 dist-clean:
 	# clean publishing output dir
