@@ -1,4 +1,4 @@
-DEPLOYMENT_REPO=stou.github.io
+DEPLOYMENT_REPO=gusdunn.com
 
 all: server
 
@@ -15,15 +15,15 @@ view:
 
 server: clean
     # Server the site up locally
-    hugo server -w  --buildDrafts=true
+    hugo server -s site -w  --buildDrafts=true
 
 clean:
     # clean out the local server build artifacts
-    -rm -r public/*
+    -rm -r site/public/*
 
 dist: dist-clean
     # Build the project for publishing
-    hugo -s . -d ${DEPLOYMENT_REPO}
+    hugo -s site -d ${DEPLOYMENT_REPO}
 
 dist-clean:
     # clean publishing output dir
