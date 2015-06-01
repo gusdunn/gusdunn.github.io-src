@@ -4,6 +4,7 @@ Title: "Gus Dunn"
 canonifyurls: true
 copyright: "Copyright (c) 2015, Gus Dunn; some rights reserved."
 footnotereturnlinkcontents: "↩"
+theme: landing-page-hugo
 
 Params:
   Author: "Gus Dunn"
