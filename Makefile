@@ -1,4 +1,9 @@
-DEPLOYMENT_REPO=gusdunn.com
+# this terminal directory will be a link to a separate instance of this repo.
+# One with the gh-pages
+DEPLOYMENT_REPO=dist-build/gusdunn.com
+
+# Contents of CNAME file
+CNAME="gusdunn.com"
 
 all: server
 
@@ -24,8 +29,11 @@ clean:
 dist: dist-clean
 	# Build the project for publishing
 	hugo -s site -d ${DEPLOYMENT_REPO}
+	# replace the CNAME file after cleaning
+	echo $CNAME > ${DEPLOYMENT_REPO}/CNAME
 
 dist-clean:
 	# clean publishing output dir
 	# NB: Avoid removing the .git folder
-	-rm -r ${DEPLOYMENT_REPO}/*
+	-rm -r site/${DEPLOYMENT_REPO}/*
+
