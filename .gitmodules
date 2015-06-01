@@ -6,4 +6,4 @@
 	url = git@github.com:xguse/landing-page-hugo.git
 [submodule "site/themes/purehugo"]
 	path = site/themes/purehugo
-	url = git@github.com:dplesca/purehugo.git
+	url = git@github.com:xguse/purehugo.git
