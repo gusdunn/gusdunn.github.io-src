@@ -4,3 +4,6 @@
 [submodule "site/themes/landing-page-hugo"]
 	path = site/themes/landing-page-hugo
 	url = git@github.com:xguse/landing-page-hugo.git
+[submodule "site/themes/purehugo"]
+	path = site/themes/purehugo
+	url = git@github.com:dplesca/purehugo.git
