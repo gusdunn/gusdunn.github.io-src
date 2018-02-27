@@ -7,3 +7,6 @@
 [submodule "site/themes/purehugo"]
 	path = site/themes/purehugo
 	url = git@github.com:xguse/purehugo.git
+[submodule "site/themes/academic"]
+	path = site/themes/academic
+	url = git@github.com:gusdunn/hugo-academic.git
