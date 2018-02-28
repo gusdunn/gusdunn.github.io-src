@@ -10,3 +10,7 @@
 [submodule "site/themes/academic"]
 	path = site/themes/academic
 	url = git@github.com:gusdunn/hugo-academic.git
+[submodule "site/public"]
+	path = site/public
+	url = git@github.com:gusdunn/gusdunn.github.io.git
+	branch = master
