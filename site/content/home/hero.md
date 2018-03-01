@@ -4,7 +4,7 @@ widget = "hero"
 active = true
 date = 2018-02-27
 
-title = "biology - data science"
+# title = "biology - data science"
 
 # Order that this section will appear in.
 weight = 3
@@ -14,7 +14,7 @@ weight = 3
 [header]
   overlay_color = "" # "#666"  # An HTML color value.
   overlay_img = "headers/htop_034_header.png"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.7  # Darken the image. Value in range 0-1.
+  overlay_filter = 0  # Darken the image. Value in range 0-1.
 
 # Call to action button (optional).
 #   Activate the button by specifying a URL and button label below.
@@ -28,10 +28,3 @@ weight = 3
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-
-
-
