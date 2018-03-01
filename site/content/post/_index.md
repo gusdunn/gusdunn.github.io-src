@@ -9,4 +9,6 @@ highlight = false
 image = ""
 caption = ""
 
+aliases = ["/blog/"]
+
 +++
