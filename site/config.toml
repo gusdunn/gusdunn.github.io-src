@@ -5,6 +5,9 @@
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "http://www.gusdunn.com/"
 
+
+custom_css = ["override_academic.css"]
+
 # Title of your site
 title = "Gus Dunn"
 
