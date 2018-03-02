@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Provide automation logic for common project maintainance jobs."""
+import inspect
 from pathlib import Path
 
 from invoke import task
 
-PROJECT_DIR = Path('.').resolve()
+PROJECT_DIR = Path(inspect.getfile(inspect.currentframe())).parent
 SITE_DIR = PROJECT_DIR / 'site'
-DEPLOYMENT_REPO = PROJECT_DIR / SITE_DIR / 'public'
+DEPLOYMENT_REPO = SITE_DIR / 'public'
 
 CNAME = 'www.gusdunn.com\ngusdunn.com'
 
@@ -31,6 +32,12 @@ def dist(ctx):
     ctx.run(f"""hugo -s {SITE_DIR} -d {DEPLOYMENT_REPO.stem}""")
 
 
-@task
+@task(dist)
 def deploy(ctx):
-    """Build the latest content, """
+    """Build the latest content, commit and push content to DEPLOYMENT_REPO."""
+    c_and_p_deploy = f"""cd {DEPLOYMENT_REPO} && """ \
+                     """git add . && """ \
+                     """git commit -m "rebuilt site $(date)" && """ \
+                     """git push origin master"""
+
+    ctx.run(c_and_p_deploy)
