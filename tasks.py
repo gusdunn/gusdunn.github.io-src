@@ -53,6 +53,7 @@ def update_theme(ctx):
           """git rebase upstream/master && """ \
           """git push && """ \
           f"""cd {PROJECT_DIR} && """ \
+          """git add . && """ \
           """git commit -m "synced forked Academic theme with upstream  $(date)" && """ \
           """git push origin master"""
 
