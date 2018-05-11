@@ -41,3 +41,19 @@ def deploy(ctx):
                      """git push origin master"""
 
     ctx.run(c_and_p_deploy)
+
+
+@task
+def update_theme(ctx):
+    """Sync forked repo of the Academic theme with upstream."""
+    ACADEMIC_DIR = PROJECT_DIR / "site/themes/academic"
+
+    cmd = f"""cd {ACADEMIC_DIR} && """ \
+          """git fetch upstream && """ \
+          """git rebase upstream/master && """ \
+          """git push && """ \
+          f"""cd {PROJECT_DIR} && """ \
+          """git commit -m "synced forked Academic theme with upstream  $(date)" && """ \
+          """git push origin master"""
+
+    ctx.run(cmd)
