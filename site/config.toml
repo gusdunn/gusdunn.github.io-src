@@ -251,6 +251,11 @@ defaultContentLanguageInSubdir = false
     icon_pack = "fa"
     link = "//github.com/xguse"
 
+  [[params.social]]
+    icon = "cv"
+    icon_pack = "ai"
+    link = "http://tiny.cc/gusdunn_short_cv"
+
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
