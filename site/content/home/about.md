@@ -36,6 +36,8 @@ weight = 5
 
 # Biography
 
+[Download my abbreviated CV](http://tiny.cc/gusdunn_short_cv)
+
 ## Boston Children's Hospital
 
 I am currently a Postdoctoral Fellow in [Scott Snapper's](http://www.childrenshospital.org/research-and-innovation/research/labs/snapper-laboratory) Lab at BCH.
