@@ -2,6 +2,7 @@
 """Provide automation logic for common project maintainance jobs."""
 import inspect
 from pathlib import Path
+import datetime as dt
 
 from invoke import task
 
@@ -35,12 +36,19 @@ def dist(ctx):
 @task(dist)
 def deploy(ctx):
     """Build the latest content, commit and push content to DEPLOYMENT_REPO."""
+    now = dt.datetime.now().isoformat()
+
     c_and_p_deploy = f"""cd {DEPLOYMENT_REPO} && """ \
                      """git add . && """ \
-                     """git commit -m "rebuilt site $(date)" && """ \
-                     """git push origin master"""
+                     f"""git commit -m "rebuilt site {now}" && """ \
+                     """git push origin master """
+
+    commit_delta_submod = f"""cd {PROJECT_DIR} && """ \
+                          f"""git commit site/public -m "built and pushed site to live: {now}" && """ \
+                          """git push origin master"""
 
     ctx.run(c_and_p_deploy)
+    ctx.run(commit_delta_submod)
 
 
 @task
