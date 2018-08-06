@@ -14,11 +14,19 @@ CNAME = 'www.gusdunn.com\ngusdunn.com'
 
 
 @task
+def install(ctx):
+    """Install the needed packages into a virtual environment."""
+    ctx.run("pipenv install")
+
+
+@task
 def clean_deployment_repo(ctx):
     """Clean DEPLOYMENT_REPO of all files, but leave the .git dir and other required things."""
     ctx.run(f"""rm -rf {DEPLOYMENT_REPO}/*""")
     ctx.run(f"""echo '{CNAME}' > {DEPLOYMENT_REPO}/CNAME""")
-    ctx.run(f"""cp {PROJECT_DIR}/README.md {PROJECT_DIR}/LICENSE.html {DEPLOYMENT_REPO}/""")
+    ctx.run(
+        f"""cp {PROJECT_DIR}/README.md {PROJECT_DIR}/LICENSE.html {DEPLOYMENT_REPO}/"""
+    )
 
 
 @task(clean_deployment_repo)
